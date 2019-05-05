@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: HeadlessChrome 71.0.3578 / Linux 0.0.0" tests="36" failures="0" skipped="2" errors="0" time="290.073" timestamp="Fri, 03 May 2019 19:22:31 GMT" >
+  <testcase classname="1028 Release Testing Protocol
+  TC-01: Adding Data (RID-4.2.6.6)" name="Prevent, Celcius:
+    Temperature 3500, check for spotting, lh negative and sex icons
+  " time="24.283">
+  </testcase>
+  <testcase classname="1028 Release Testing Protocol
+  TC-01: Adding Data (RID-4.2.6.6)" name="Prevent, Celcius:
+    Temperature 4099 can be entered
+  " time="24.429">
+  </testcase>
+  <testcase classname="Add data
+  Navigation tests (Fahrenheit)" name="1103: TC1.5.05 - as a user with my units set to Fahrenheit who has input a temperature value I should be able
+   to swipe left or right to other days Data entry screen and have the value saved" time="132.306">
+    <skipped/>
+  </testcase>
+  <testcase classname="Sign up process
+  &quot;Subcription Plans&quot;-page (1103: TC1.13.02a)
+  subscriptionPlans.test.ts" name="as a user who on &#39;Subscription plans&#39; page I should be able to find, select Annual
+   plan and be landed on &#39;Shipping address&#39; page" time="131.382">
+  </testcase>
+</testsuite>

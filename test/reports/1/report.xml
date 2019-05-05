@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: HeadlessChrome 71.0.3578 / Linux 0.0.0" tests="32" failures="0" skipped="1" errors="0" time="195.289" timestamp="Fri, 03 May 2019 19:20:01 GMT" >
+  <testcase classname="1028 Release Testing Protocol
+  TC-02: Editing Data in Month page" name="Prevent, Celcius:
+    Adding lh negative test
+  " time="50.871">
+  </testcase>
+  <testcase classname="1028 Release Testing Protocol
+  TC-02: Editing Data in Month page" name="Plan, Celcius:
+    Adding lh positive test
+  " time="50.767">
+  </testcase>
+  <testcase classname="Sign up process
+  Shipping address
+  04-shippingAddress.test.ts" name="as a user who on &#39;Shipping address&#39; page and selected US as a Country and IP
+   country is US I should have a Fahrenheit thermometer preselected otherwise Celsius" time="88.475">
+    <skipped/>
+  </testcase>
+</testsuite>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: HeadlessChrome 71.0.3578 / Linux 0.0.0" tests="27" failures="0" skipped="2" errors="0" time="212.628" timestamp="Fri, 03 May 2019 19:20:51 GMT" >
+  <testcase classname="1028 Release Testing Protocol
+  TC-15: Language Switching" name="To Portuguese - Prevent, Celsius" time="44.417">
+  </testcase>
+  <testcase classname="Add data
+  Data input other than temperature value (Celsius)" name="1103: TC1.5.01-d - as a user with my units set to Celsius I should be able to select Spotting or Period or
+   remove the selection by using the applicable buttons. I should also be able to leave the selection empty" time="26.847">
+  </testcase>
+  <testcase classname="Add data
+  Data input other than temperature value (Celsius)" name="1103: TC1.5.01b - as a user with my units set to Celsius I should be able to enter a Ovulation Test as positive
+   or negative or remove the selection by using the applicable buttons. I should also be able to leave the selection empty" time="26.678">
+  </testcase>
+  <testcase classname="Add data
+  Data input other than temperature value (Celsius)" name="1103: TC1.5.06 - as a user with my units set to Celsius and who is monitoring a pregnancy I should be able
+   to confirm when the pregnancy has ended by selecting No longer pregnant button and confirm the date by using a date picker" time="23.563">
+    <skipped/>
+  </testcase>
+  <testcase classname="Add data
+  Data input other than temperature value (Fahrenheit)" name="1103: TC1.5.06 - as a user with my units set to Fahrenheit and who is monitoring a pregnancy I should be able
+   to confirm when the pregnancy has ended by selecting No longer pregnant button and confirm the date by using a date picker" time="146.332">
+    <skipped/>
+  </testcase>
+  <testcase classname="In payment process" name="as a user with 3DSecure Visa Card on &#39;Add payment method&#39; page I should not be able
+   to pass this step entering wrong 3DSecure code" time="146.327">
+  </testcase>
+</testsuite>

@@ -1,11 +1,25 @@
 {
   "name": "@naturalcycles/junit-lib",
-  "scripts": {},
-  "dependencies": {},
+  "scripts": {
+    "junit2html": "tsn ./src/bin/junit2html.ts",
+    "junit2html-debug": "tsn ./src/bin/junit2html.ts './test/reports/**/*.xml' --out ./tmp/report.html --debug"
+  },
+  "dependencies": {
+    "@naturalcycles/fs-lib": "^2.0.0",
+    "@naturalcycles/js-lib": "^4.8.1",
+    "@naturalcycles/json2html": "^1.0.0",
+    "@naturalcycles/promise-lib": "^2.2.0",
+    "fs-extra": "^7.0.1",
+    "globby": "^9.2.0",
+    "loud-rejection": "^2.1.0",
+    "xml2js": "^0.4.19",
+    "yargs": "^13.2.2"
+  },
   "devDependencies": {
     "@naturalcycles/dev-lib": "^7.3.0",
     "@naturalcycles/semantic-release": "^1.0.0",
     "@types/node": "^12.0.0",
+    "@types/xml2js": "^0.4.4",
     "jest": "^24.7.1"
   },
   "files": [
@@ -16,8 +30,9 @@
     "!src/**/__snapshots__",
     "!src/**/__exclude"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "bin": {
+    "junit2html": "dist/bin/junit2html.js"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -29,7 +44,12 @@
     "node": ">=10.13"
   },
   "version": "0.0.0",
-  "description": "",
+  "description": "Convert junit xml to html, merge multiple junit xml reports",
+  "keywords": [
+    "junit",
+    "xunit",
+    "html"
+  ],
   "author": "Natural Cycles Team",
   "license": "MIT"
 }

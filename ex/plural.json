@@ -1,0 +1,26 @@
+{
+  "testsuites": {
+    "testsuite": [
+      {
+        "$": {
+          "name": "TestCafe Tests: HeadlessChrome 71.0.3578 / Linux 0.0.0",
+          "tests": "36",
+          "failures": "0",
+          "skipped": "2",
+          "errors": "0",
+          "time": "290.073",
+          "timestamp": "Fri, 03 May 2019 19:22:31 GMT"
+        },
+        "testcase": [
+          {
+            "$": {
+              "classname": "1028 Release Testing Protocol\n  TC-01: Adding Data (RID-4.2.6.6)",
+              "name": "Prevent, Celcius:\n    Temperature 3500, check for spotting, lh negative and sex icons\n  ",
+              "time": "24.283"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
