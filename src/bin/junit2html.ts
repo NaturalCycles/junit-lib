@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import 'loud-rejection/register'
 import { junit2htmlCommand } from '../junit.util'
 
