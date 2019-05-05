@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/NaturalCycles/junit-lib/compare/v1.0.0...v1.0.1) (2019-05-05)
+
+
+### Bug Fixes
+
+* bin ([df769e0](https://github.com/NaturalCycles/junit-lib/commit/df769e0))
+
 # 1.0.0 (2019-05-05)
 
 
