@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/NaturalCycles/junit-lib/compare/v1.0.1...v1.0.2) (2019-08-19)
+
+
+### Bug Fixes
+
+* security updates ([81e3458](https://github.com/NaturalCycles/junit-lib/commit/81e3458))
+
 ## [1.0.1](https://github.com/NaturalCycles/junit-lib/compare/v1.0.0...v1.0.1) (2019-05-05)
 
 
