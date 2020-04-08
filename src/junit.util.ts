@@ -1,7 +1,7 @@
+import { pMap } from '@naturalcycles/js-lib'
 import { json2html } from '@naturalcycles/json2html'
-import { pMap } from '@naturalcycles/promise-lib'
 import * as fs from 'fs-extra'
-import globby from 'globby'
+import * as globby from 'globby'
 import { promisify } from 'util'
 import { OptionsV2, parseString as _parseString, processors } from 'xml2js'
 import * as yargs from 'yargs'
@@ -9,7 +9,7 @@ import { JUnitTestSuiteReport, JUnitTestSuitesReport, TestSuite } from './junit.
 
 const parseString = promisify<string, OptionsV2, any>(_parseString)
 
-export async function junit2htmlCommand (): Promise<void> {
+export async function junit2htmlCommand(): Promise<void> {
   const { argv } = yargs.demandCommand(1).options({
     out: {
       type: 'string',
@@ -56,7 +56,7 @@ export async function junit2htmlCommand (): Promise<void> {
   console.log(`junit2html done: ${outPath}`)
 }
 
-async function xmlToReport (xmlPath: string): Promise<JUnitTestSuitesReport> {
+async function xmlToReport(xmlPath: string): Promise<JUnitTestSuitesReport> {
   const xml = await fs.readFile(xmlPath, 'utf8')
   const js = await parseString(xml, {
     trim: true,
@@ -69,7 +69,7 @@ async function xmlToReport (xmlPath: string): Promise<JUnitTestSuitesReport> {
   return (js as JUnitTestSuiteReport).testsuite ? testSuitesToReport(js) : js
 }
 
-function testSuitesToReport (r: JUnitTestSuiteReport): JUnitTestSuitesReport {
+function testSuitesToReport(r: JUnitTestSuiteReport): JUnitTestSuitesReport {
   return {
     testsuites: {
       testsuite: [r.testsuite],
@@ -77,7 +77,7 @@ function testSuitesToReport (r: JUnitTestSuiteReport): JUnitTestSuitesReport {
   }
 }
 
-function mergeReports (reports: JUnitTestSuitesReport[]): JUnitTestSuitesReport {
+function mergeReports(reports: JUnitTestSuitesReport[]): JUnitTestSuitesReport {
   const testSuiteObjects: TestSuite[] = []
 
   reports.forEach(r => {

@@ -6,21 +6,18 @@
   },
   "dependencies": {
     "@naturalcycles/fs-lib": "^2.0.0",
-    "@naturalcycles/js-lib": "^4.8.1",
+    "@naturalcycles/js-lib": "^10.2.0",
     "@naturalcycles/json2html": "^1.0.0",
-    "@naturalcycles/promise-lib": "^2.2.0",
-    "fs-extra": "^7.0.1",
-    "globby": "^9.2.0",
+    "fs-extra": "^9.0.0",
+    "globby": "^11.0.0",
     "loud-rejection": "^2.1.0",
     "xml2js": "^0.4.19",
-    "yargs": "^13.2.2"
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "@naturalcycles/dev-lib": "^7.3.0",
-    "@naturalcycles/semantic-release": "^1.0.0",
-    "@types/node": "^12.0.0",
+    "@naturalcycles/dev-lib": "^10.14.3",
     "@types/xml2js": "^0.4.4",
-    "jest": "^24.7.1"
+    "jest": "^25.2.7"
   },
   "files": [
     "dist",
