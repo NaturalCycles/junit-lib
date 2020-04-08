@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/NaturalCycles/junit-lib/compare/v1.0.2...v1.1.0) (2020-04-08)
+
+
+### Features
+
+* modernize ([d412b4c](https://github.com/NaturalCycles/junit-lib/commit/d412b4cac16249fd9e84113a35a67bdf7e37f789))
+
 ## [1.0.2](https://github.com/NaturalCycles/junit-lib/compare/v1.0.1...v1.0.2) (2019-08-19)
 
 

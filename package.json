@@ -40,7 +40,7 @@
   "engines": {
     "node": ">=10.13"
   },
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Convert junit xml to html, merge multiple junit xml reports",
   "keywords": [
     "junit",
