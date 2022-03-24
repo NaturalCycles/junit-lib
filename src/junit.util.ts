@@ -42,7 +42,10 @@ export async function junit2htmlCommand(): Promise<void> {
   })
    */
 
-  const reports = await pMap(xmlFiles, xmlToReport)
+  const reports = await pMap(xmlFiles, async xmlPath => {
+    const xml = fs.readFileSync(xmlPath, 'utf8')
+    return await xmlToReport(xml)
+  })
   const report = mergeReports(reports)
   const html = json2html(report.testsuites.testsuite as any)
 
@@ -53,8 +56,7 @@ export async function junit2htmlCommand(): Promise<void> {
   console.log(`junit2html done: ${outPath}`)
 }
 
-async function xmlToReport(xmlPath: string): Promise<JUnitTestSuitesReport> {
-  const xml = fs.readFileSync(xmlPath, 'utf8')
+export async function xmlToReport(xml: string): Promise<JUnitTestSuitesReport> {
   const js = await parseString(xml, {
     trim: true,
     // explicitArray: true,
@@ -63,7 +65,24 @@ async function xmlToReport(xmlPath: string): Promise<JUnitTestSuitesReport> {
     attrValueProcessors: [processors.parseNumbers, processors.parseBooleans],
   })
 
-  return (js as JUnitTestSuiteReport).testsuite ? testSuitesToReport(js) : js
+  const r: JUnitTestSuitesReport = (js as JUnitTestSuiteReport).testsuite
+    ? testSuitesToReport(js)
+    : js
+
+  // Filter-out nullish `classname`
+  if (Array.isArray(r.testsuites.testsuite)) {
+    r.testsuites.testsuite.forEach(ts => {
+      ts.testcase?.forEach(tc => {
+        if (!tc.classname) delete tc.classname
+      })
+    })
+  } else {
+    r.testsuites.testsuite.testcase?.forEach(tc => {
+      if (!tc.classname) delete tc.classname
+    })
+  }
+
+  return r
 }
 
 function testSuitesToReport(r: JUnitTestSuiteReport): JUnitTestSuitesReport {

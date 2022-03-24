@@ -14,7 +14,7 @@ export interface TestSuitesAttrs {
 export interface JUnitTestSuitesReport {
   testsuites: {
     $?: TestSuitesAttrs
-    testsuite: TestSuite[]
+    testsuite: TestSuite[] | TestSuite
   }
 }
 
@@ -37,7 +37,7 @@ export interface TestSuiteAttrs {
   [attr: string]: any
 }
 
-export interface TestSuite {
+export interface TestSuite extends TestSuiteAttrs {
   $?: TestSuiteAttrs
   testcase?: TestCase[]
   'system-out'?: string
@@ -53,7 +53,7 @@ export interface TestCaseAttrs {
   [attr: string]: any
 }
 
-export interface TestCase {
+export interface TestCase extends TestCaseAttrs {
   $: TestCaseAttrs
   skipped?: string[]
   error?: string[]
