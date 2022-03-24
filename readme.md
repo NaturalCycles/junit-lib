@@ -3,7 +3,6 @@
 > Convert junit xml to html, merge multiple junit xml reports.
 
 [![npm](https://img.shields.io/npm/v/@naturalcycles/junit-lib/latest.svg)](https://www.npmjs.com/package/@naturalcycles/junit-lib)
-[![](https://circleci.com/gh/NaturalCycles/junit-lib.svg?style=shield&circle-token=123)](https://circleci.com/gh/NaturalCycles/junit-lib)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 # Why
@@ -28,8 +27,8 @@ junit2html './reports/**/*.xml' --out report.html
 
 # Packaging
 
-- `engines.node >= 10.13`: Latest Node.js LTS
-- `main: dist/index.js`: commonjs, es2018
+- `engines.node`: Latest Node.js LTS
+- `main: dist/index.js`: commonjs, es2020
 - `types: dist/index.d.ts`: typescript types
 - `/src` folder with source `*.ts` files included
 

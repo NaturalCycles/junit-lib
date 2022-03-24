@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-import 'loud-rejection/register'
+import { runScript } from '@naturalcycles/nodejs-lib'
 import { junit2htmlCommand } from '../junit.util'
 
-void junit2htmlCommand()
+runScript(async () => {
+  await junit2htmlCommand()
+})
